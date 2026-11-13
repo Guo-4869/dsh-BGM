@@ -1,0 +1,56 @@
+{
+  "name": "dsh-bgm",
+  "version": "0.4.0",
+  "description": "常驻背景音乐插件 for DeepSeek Harness：轮播 ~/.dsh/bgm/ 里的音频，长按可拖动，支持上一首/暂停/下一首、静音与音量",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "bgm",
+    "background-music",
+    "music-player"
+  ],
+  "license": "MIT",
+  "author": "Guo-4869",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guo-4869/dsh-BGM.git"
+  },
+  "homepage": "https://github.com/Guo-4869/dsh-BGM#readme",
+  "bugs": {
+    "url": "https://github.com/Guo-4869/dsh-BGM/issues"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node scripts/smoke.mjs && node scripts/ui-smoke.mjs",
+    "test:host": "node scripts/smoke.mjs",
+    "test:ui": "node scripts/ui-smoke.mjs"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    },
+    "engines": {
+      "dsh": ">=0.2.1-rc.3"
+    }
+  }
+}

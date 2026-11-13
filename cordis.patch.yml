@@ -1,0 +1,8 @@
+# Bundle patch for dsh-bgm.
+#
+# Declaring `dsh.bundle.patch` in package.json is what makes this package a
+# PROFILE LAYER instead of an inert dependency; this insert row is what mounts
+# the plugin. Same shape as the shipped bundles (dsh-boot-animation, dsh-web).
+- insert:
+    - id: dsh-bgm
+      name: dsh-bgm

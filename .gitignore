@@ -1,0 +1,14 @@
+# 开发产物 / 本地打包
+node_modules/
+*.tgz
+*.log
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp

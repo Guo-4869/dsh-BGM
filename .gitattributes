@@ -1,0 +1,5 @@
+# 仓库内统一用 LF：插件是被 pnpm 装到各平台的，CRLF 会让 diff 与校验脚本飘
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
